@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="dataaccess" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.data.book.Item</class>
+		<class>com.data.book.Event</class>
+		<class>com.data.book.Card</class>
+		<class>com.data.book.Lesson</class>
+		<class>com.data.security.OauthCred</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/prosperity" />
+			<property name="javax.persistence.jdbc.user" value="prosperity" />
+			<property name="javax.persistence.jdbc.password" value="prosperity" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />
+			<property name="hibernate.connection.autocommit" value="true" />
+			<property name="hibernate.show_sql" value="true" />
+			<!-- <property name="hibernate.format_sql" value="true" /> -->        <!-- <property name="hibernate.transaction.flush_before_completion" value="true" 
+				/> -->
+		</properties>
+	</persistence-unit>
+	<persistence-unit name="security-data">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.data.security.OauthCred</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/prosperity" />
+			<property name="javax.persistence.jdbc.user" value="prosperity" />
+			<property name="javax.persistence.jdbc.password" value="prosperity" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.HSQLDialect" />
+			<property name="hibernate.connection.autocommit" value="true" />
+			<property name="hibernate.show_sql" value="true" />
+		</properties>
+	</persistence-unit>
+	
+</persistence>
