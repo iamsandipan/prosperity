@@ -13,7 +13,7 @@
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 	<servlet>
-		<servlet-name>Jersey Web Application</servlet-name>
+		<servlet-name>JerseyWebApplication</servlet-name>
 		<servlet-class>com.sun.jersey.spi.spring.container.servlet.SpringServlet</servlet-class>
 		<init-param>
 			<param-name>com.sun.jersey.config.property.packages</param-name>
@@ -30,7 +30,7 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>Jersey Web Application</servlet-name>
+		<servlet-name>JerseyWebApplication</servlet-name>
 		<url-pattern>/webresources/*</url-pattern>
 	</servlet-mapping>
 </web-app>

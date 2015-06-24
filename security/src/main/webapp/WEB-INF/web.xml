@@ -7,30 +7,28 @@
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:spring-context.xml</param-value>
+		<param-value>classpath:spring-security-context.xml</param-value>
 	</context-param>
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
 	<servlet>
-		<servlet-name>Jersey Web Application</servlet-name>
+		<servlet-name>JerseySecurityApplication</servlet-name>
 		<servlet-class>com.sun.jersey.spi.spring.container.servlet.SpringServlet</servlet-class>
-<!-- 		<init-param>
-			<param-name>com.sun.jersey.config.property.packages</param-name>
-			<param-value>com.data.dao</param-value>
+		
+		<init-param> 
+			<param-name>com.sun.jersey.config.property.packages</param-name> 
+			<param-value>com.data.security</param-value> 
+		</init-param> 
+		<init-param> 
+			<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name> 
+			<param-value>true</param-value> 
 		</init-param>
- -->		<init-param>
-			<param-name>com.sun.jersey.config.property.packages</param-name>
-			<param-value>com.rest.services</param-value>
-		</init-param>
-		<init-param>
-			<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
-			<param-value>true</param-value>
-		</init-param>
-		<load-on-startup>1</load-on-startup>
+		
 	</servlet>
+	
 	<servlet-mapping>
-		<servlet-name>Jersey Web Application</servlet-name>
+		<servlet-name>JerseySecurityApplication</servlet-name>
 		<url-pattern>/security*</url-pattern>
 	</servlet-mapping>
 </web-app>
