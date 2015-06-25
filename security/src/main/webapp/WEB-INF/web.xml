@@ -18,7 +18,7 @@
 		
 		<init-param> 
 			<param-name>com.sun.jersey.config.property.packages</param-name> 
-			<param-value>com.data.security</param-value> 
+			<param-value>com.security.resource</param-value> 
 		</init-param> 
 		<init-param> 
 			<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name> 
@@ -29,6 +29,6 @@
 	
 	<servlet-mapping>
 		<servlet-name>JerseySecurityApplication</servlet-name>
-		<url-pattern>/security*</url-pattern>
+		<url-pattern>/security/*</url-pattern>
 	</servlet-mapping>
 </web-app>
