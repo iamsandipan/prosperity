@@ -1,0 +1,1 @@
+http://localhost:8080/oauth2/oauth/token?grant_type=password&client_id=my-trusted-client-with-secret&client_secret=somesecret&username=user&password=password
