@@ -7,7 +7,7 @@
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:spring-security-context.xml</param-value>
+		<param-value>classpath:META-INF/spring-security-context.xml</param-value>
 	</context-param>
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -27,8 +27,12 @@
 		
 	</servlet>
 	
+	
 	<servlet-mapping>
 		<servlet-name>JerseySecurityApplication</servlet-name>
 		<url-pattern>/security/*</url-pattern>
 	</servlet-mapping>
+	
+	
+	
 </web-app>
