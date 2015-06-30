@@ -9,23 +9,6 @@
 		<artifactId>prosperity-parent</artifactId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
-	<repositories>
-		<repository>
-			<id>central</id>
-			<name>Central Repository</name>
-			<url>http://repo.maven.apache.org/maven2</url>
-			<layout>default</layout>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<!-- contains setting for artifacts made available as snapshots -->
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-
-	</repositories>
-
 	<dependencies>
 		<dependency>
 			<groupId>prosperity</groupId>
@@ -79,7 +62,7 @@
 			<artifactId>spring-web</artifactId>
 			<version>${spring-core-version}</version>
 		</dependency>
-		
+
 
 		<!-- OAuth 2.0 dependencies -->
 		<!-- <dependency> <groupId>org.springframework.security.oauth</groupId> 
@@ -115,7 +98,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
+
 	</dependencies>
 	<build>
 		<plugins>

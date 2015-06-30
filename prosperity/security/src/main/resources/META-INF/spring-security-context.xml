@@ -10,5 +10,6 @@
  
 
   	<context:component-scan base-package="com.security" />
+  	<context:component-scan base-package="com.data" />
   	
 </beans>

@@ -8,16 +8,15 @@
 	<name>Prosperity Application</name>
 	<modules>
 		<module>book</module>
-		<module>data</module>
 		<module>security</module>
 
 	</modules>
 	<properties>
-		<jersey-version>1.8</jersey-version>
+		<jersey-version>1.9</jersey-version>
 		<servlet-version>2.5</servlet-version>
 		<asm-version>3.3.1</asm-version>
 		<junit-version>4.12</junit-version>
-<spring-core-version>4.1.6.RELEASE</spring-core-version>
+		<spring-core-version>4.1.6.RELEASE</spring-core-version>
 		<open-jpa-version>2.3.0</open-jpa-version>
 		<postgres-version>9.1-901-1.jdbc4</postgres-version>
 	</properties>
