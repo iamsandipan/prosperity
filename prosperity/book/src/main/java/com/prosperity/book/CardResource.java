@@ -16,7 +16,6 @@ import com.data.book.Card;
 import com.data.dao.book.CardDAOService;
 import com.google.gson.Gson;
 import com.prosperity.model.CardWebModel;
-import com.sun.jersey.spi.container.ResourceFilters;
 import com.prosperity.filters.SecurityFilter;
 
 /** Example resource class hosted at the URI path "/myresource"
@@ -40,7 +39,6 @@ public class CardResource {
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	@Path("/getVersion")
-	@ResourceFilters(SecurityFilter.class)
     public String getVersion() {
 		return "1.0.0-Beta";
     }
