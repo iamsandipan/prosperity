@@ -4,11 +4,81 @@
 	<artifactId>prosperity-security</artifactId>
 	<name>Security Jar</name>
 	<packaging>jar</packaging>
-	<parent>
-		<groupId>prosperity</groupId>
-		<artifactId>prosperity-parent</artifactId>
-		<version>1.0-SNAPSHOT</version>
-	</parent>
+
+	<properties>
+		<jersey-version>1.9</jersey-version>
+		<jersey-client-version>1.9.1</jersey-client-version>
+		<servlet-version>2.5</servlet-version>
+		<asm-version>3.3.1</asm-version>
+		<junit-version>4.12</junit-version>
+		<spring-core-version>4.1.6.RELEASE</spring-core-version>
+		<open-jpa-version>2.3.0</open-jpa-version>
+		<postgres-version>9.1-901-1.jdbc4</postgres-version>
+	</properties>
+		<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.apache.openjpa</groupId>
+				<artifactId>openjpa</artifactId>
+				<version>${open-jpa-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>${postgres-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring-core-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${spring-core-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>asm</groupId>
+				<artifactId>asm</artifactId>
+				<version>${asm-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.code.gson</groupId>
+				<artifactId>gson</artifactId>
+				<version>2.2.4</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>${servlet-version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.sun.jersey</groupId>
+				<artifactId>jersey-server</artifactId>
+				<version>${jersey-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.sun.jersey</groupId>
+				<artifactId>jersey-json</artifactId>
+				<version>${jersey-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit-version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.sun.jersey</groupId>
+				<artifactId>jersey-client</artifactId>
+				<version>${jersey-client-version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+
 	<dependencies>
 		<dependency>
 			<groupId>prosperity</groupId>
@@ -149,4 +219,6 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+	<groupId>prosperity</groupId>
+	<version>1.0-SNAPSHOT</version>
 </project>

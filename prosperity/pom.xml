@@ -8,7 +8,6 @@
 	<name>Prosperity Application</name>
 	<modules>
 		<module>book</module>
-		<module>security</module>
 
 	</modules>
 	<properties>
