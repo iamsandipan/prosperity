@@ -16,7 +16,7 @@
 		<servlet-version>2.5</servlet-version>
 		<asm-version>3.3.1</asm-version>
 		<junit-version>4.12</junit-version>
-		<spring-core-version>4.1.6.RELEASE</spring-core-version>
+		<spring.version>3.1.1.RELEASE</spring.version>
 		<open-jpa-version>2.3.0</open-jpa-version>
 		<postgres-version>9.1-901-1.jdbc4</postgres-version>
 	</properties>
@@ -41,12 +41,12 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context</artifactId>
-				<version>${spring-core-version}</version>
+				<version>${spring.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-core</artifactId>
-				<version>${spring-core-version}</version>
+				<version>${spring.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>asm</groupId>
