@@ -11,6 +11,10 @@ import javax.ws.rs.core.MediaType;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.data.book.Card;
 import com.data.dao.book.CardDAOService;
@@ -21,9 +25,8 @@ import com.prosperity.filters.SecurityFilter;
 /** Example resource class hosted at the URI path "/myresource"
  */
 
-@Path("/cardservice")
-@Component
-
+@Controller
+@RequestMapping("/cardservice")
 public class CardResource {
 	
 	@Autowired
@@ -36,19 +39,14 @@ public class CardResource {
     
 	//Get it Sub Resource http://localhost:8080/prosperity-book/webresources/myresource/getVersion
 	
-	@GET
-	@Produces(MediaType.APPLICATION_JSON)
-	@Path("/getVersion")
-    public String getVersion() {
+	@RequestMapping(value="/getVersion", method = RequestMethod.GET)
+	public @ResponseBody String getVersion() {
 		return "1.0.0-Beta";
     }
 
 	
-	@PUT
-	@Produces(MediaType.APPLICATION_JSON)
-	@Consumes(MediaType.APPLICATION_JSON)
-    @Path("/createCard")
-    public String createCard(CardWebModel lesson) {
+	@RequestMapping(value="/createCard", method = RequestMethod.POST)
+	public @ResponseBody String createCard(CardWebModel lesson) {
 		Gson gson = new Gson();
 		String createdLesson = cardDAOService.createCard(gson.toJson(lesson), lesson.getPreviousCardId(), lesson.getNextCardId());
 		return createdLesson;
@@ -56,10 +54,8 @@ public class CardResource {
 	
 	
 	
-	@GET
-	@Produces(MediaType.APPLICATION_JSON)
-    @Path("/getCard/{id}")
-    public CardWebModel getCard(@PathParam("id") String id) {
+	@RequestMapping(value="/getCard/{id}", method = RequestMethod.GET)
+    public @ResponseBody CardWebModel getCard(@PathParam("id") String id) {
 		//Return the xml formmat of the lesson
 		Card card = cardDAOService.findCardById(id);
 		CardWebModel cardModel = new CardWebModel(card);
