@@ -75,7 +75,7 @@ public class UserService extends BaseService implements UserDetailsService {
         Assert.notNull(username);
         Assert.notNull(password);
         User user = locateUser(username);
-        if(!userDaoService.encode(password).equals(user.getHashedPassword())) {
+        if(!passwordEncoder.encode(password).equals(user.getHashedPassword())) {
             throw new AuthenticationException();
         }
         return new ApiUser(user);

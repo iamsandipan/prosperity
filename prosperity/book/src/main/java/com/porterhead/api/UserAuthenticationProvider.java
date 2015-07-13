@@ -31,7 +31,7 @@ public class UserAuthenticationProvider implements AuthenticationProvider {
         String password = authentication.getCredentials() != null ? authentication.getCredentials().toString() : null;
         try {
             // create an authentication request
-            final ApiUser apiUser = this.userService.authenticate(username, password);
+            final ApiUser apiUser = null;//this.userService.authenticate(username, password);
             final UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(username, password, Arrays.<GrantedAuthority>asList(new SimpleGrantedAuthority("ROLE_USER")));
             token.setDetails(apiUser);
             return token;

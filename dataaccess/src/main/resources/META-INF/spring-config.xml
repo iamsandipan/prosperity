@@ -15,12 +15,8 @@
 
 	<context:component-scan base-package="com.data" />
 
-<!--  	<tx:annotation-driven transaction-manager="txManager" />
- --> <!--  	<import resource="classpath:META-INF/token-store.xml"/>
-	<import resource="classpath:META-INF/client-details.xml"/>
-	<import resource="classpath:META-INF/oauth2-configuration.xml"/>
-	<import resource="classpath:META-INF/authentication-managers.xml"/>
-	<import resource="classpath:META-INF/security-configuration.xml"/>
- -->	
+<!--   	<tx:annotation-driven transaction-manager="txManager" /> -->
+   	<import resource="classpath:META-INF/token-store.xml"/>
+ 	
 	
 </beans>

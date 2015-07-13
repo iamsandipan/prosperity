@@ -47,7 +47,6 @@ public class VerificationTokenDAOService {
 
     private UserRepository userRepository;
 
-    private PasswordEncoder passwordEncoder;
 
     @Value("${token.emailVerification.timeToLive.inMinutes}")
     private int emailVerificationTokenExpiryTimeInMinutes;
@@ -63,10 +62,9 @@ public class VerificationTokenDAOService {
 
  
     @Autowired
-    public VerificationTokenDAOService(UserRepository userRepository, VerificationTokenRepository tokenRepository, PasswordEncoder passwordEncoder) {
+    public VerificationTokenDAOService(UserRepository userRepository, VerificationTokenRepository tokenRepository) {
         this.userRepository = userRepository;
         this.tokenRepository = tokenRepository;
-        this.passwordEncoder = passwordEncoder;
     }
 
   
@@ -121,7 +119,7 @@ public class VerificationTokenDAOService {
 
    
     @Transactional
-    public VerificationToken resetPassword(String base64EncodedToken, String password) throws NopSqlDbException {
+    public VerificationToken resetPassword(String base64EncodedToken, String encodedPassword) throws NopSqlDbException {
         Assert.notNull(base64EncodedToken);
         VerificationToken token = loadToken(base64EncodedToken);
         if (token.isVerified()) {
@@ -130,7 +128,7 @@ public class VerificationTokenDAOService {
         token.setVerified(true);
         User user = userRepository.findOne(token.getUserId());
         try {
-            user.setHashedPassword(passwordEncoder.encode(password));
+            user.setHashedPassword(encodedPassword);
         } catch (Exception e) {
             throw new NopSqlDbException();
         }

@@ -29,15 +29,7 @@ public class UserDAOService implements UserDetailsService {
     @Autowired
     private UserRepository userRepository;
     
-    @Autowired
-    private PasswordEncoder passwordEncoder;
 
-/*    @Autowired
-    public UserDAOService(final UserRepository userRepository, PasswordEncoder passwordEncoder) {
-        this.userRepository = userRepository;
-        this.passwordEncoder = passwordEncoder;
-    }
-*/
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         return locateUser(username);
@@ -45,10 +37,6 @@ public class UserDAOService implements UserDetailsService {
 
     public  User findByEmailAddress(String userName){
     	return userRepository.findByEmailAddress(userName.toLowerCase());
-    }
-
-    public String encode(String passwd){
-    	return passwordEncoder.encode(passwd);
     }
     
     
@@ -72,15 +60,6 @@ public class UserDAOService implements UserDetailsService {
 		}
     }
 
-    public ApiUser authenticate(String username, String password) throws NopSqlDbException {
-        Assert.notNull(username);
-        Assert.notNull(password);
-        User user = locateUser(username);
-        if(!passwordEncoder.encode(password).equals(user.getHashedPassword())) {
-            throw new NopSqlDbException();
-        }
-        return new ApiUser(user);
-    }
     
     public User findById(String userId) {
         return userRepository.findById(userId);
