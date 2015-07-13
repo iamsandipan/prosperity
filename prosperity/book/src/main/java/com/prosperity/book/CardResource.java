@@ -24,7 +24,9 @@ import com.prosperity.model.CardWebModel;
 /** Example resource class hosted at the URI path "/myresource"
  */
 
-@Controller
+@Path("/cardservice")
+@Produces({MediaType.APPLICATION_JSON})
+@Consumes({MediaType.APPLICATION_JSON})
 @RequestMapping("/cardservice")
 public class CardResource {
 	

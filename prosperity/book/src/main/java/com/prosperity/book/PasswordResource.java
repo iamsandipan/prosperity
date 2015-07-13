@@ -25,7 +25,7 @@ import javax.ws.rs.core.Response;
 public class PasswordResource {
 
     @Autowired
-    protected VerificationTokenDAOService verificationTokenService;
+    private VerificationTokenDAOService verificationTokenService;
 
     @PermitAll
     @Path("tokens")

@@ -119,7 +119,7 @@ public class UserService extends BaseService implements UserDetailsService {
      */
     public User locateUser(final String username) {
         notNull(username, "Mandatory argument 'username' missing.");
-        return userDaoService.locateUser(username);
+        return userDaoService.loadUserByUsername(username);
     }
 
     private User insertNewUser(final CreateUserRequest createUserRequest) {

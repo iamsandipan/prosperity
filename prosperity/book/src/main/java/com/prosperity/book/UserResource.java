@@ -49,7 +49,6 @@ public class UserResource extends BaseResource {
 
 
     private UserDAOService userService;
-    private VerificationTokenDAOService verificationTokenService;
     private DefaultTokenServices tokenServices;
     private PasswordEncoder passwordEncoder;
     private ClientDetailsService clientDetailsService;
@@ -57,12 +56,10 @@ public class UserResource extends BaseResource {
     public UserResource(){}
 
     @Autowired
-    public UserResource(final UserDAOService userService, final VerificationTokenDAOService verificationTokenService,
-                        final DefaultTokenServices defaultTokenServices,
-                        final PasswordEncoder passwordEncoder, ClientDetailsService clientDetailsService) {
+    public UserResource(final UserDAOService userService, 
+                        final PasswordEncoder passwordEncoder, 
+                        ClientDetailsService clientDetailsService) {
         this.userService = userService;
-        this.verificationTokenService = verificationTokenService;
-        this.tokenServices = defaultTokenServices;
         this.passwordEncoder = passwordEncoder;
         this.clientDetailsService = clientDetailsService;
     }

@@ -37,14 +37,15 @@ import com.data.oauth2.mongodb.VerificationTokenRepository;
  * @author: Sandipan
  * @since 13/05/2013
  */
-@Service("verificationTokenService")
+@Service
 public class VerificationTokenDAOService {
 
     private static final Pattern UUID_PATTERN = Pattern.compile("^[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}$");
 
+    @Autowired
     private VerificationTokenRepository tokenRepository;
 
-
+    @Autowired
     private UserRepository userRepository;
 
 
@@ -61,11 +62,7 @@ public class VerificationTokenDAOService {
     private String hostNameUrl;
 
  
-    @Autowired
-    public VerificationTokenDAOService(UserRepository userRepository, VerificationTokenRepository tokenRepository) {
-        this.userRepository = userRepository;
-        this.tokenRepository = tokenRepository;
-    }
+    
 
   
     @Transactional

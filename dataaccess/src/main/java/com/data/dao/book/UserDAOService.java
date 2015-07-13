@@ -5,7 +5,6 @@ import static org.springframework.util.Assert.notNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
@@ -28,7 +27,7 @@ public class UserDAOService implements UserDetailsService {
     private UserRepository userRepository;
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public User loadUserByUsername(String username) throws UsernameNotFoundException {
     	notNull(username, "Mandatory argument 'username' missing.");
         User user = userRepository.findByEmailAddress(username.toLowerCase());
         if (user == null) {

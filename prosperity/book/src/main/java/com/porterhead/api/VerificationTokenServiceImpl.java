@@ -15,7 +15,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
 import com.data.book.constants.VerificationTokenType;
-import com.data.dao.book.VerificationTokenDAOService;
 import com.data.mongo.model.User;
 import com.data.mongo.model.VerificationToken;
 import com.data.oauth2.mongodb.UserRepository;
