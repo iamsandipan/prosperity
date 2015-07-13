@@ -17,7 +17,7 @@
 		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
 		<!-- <init-param>
 			<param-name>javax.ws.rs.Application</param-name>
-			<param-value>com.porterhead.RestResourceApplication</param-value>
+			<param-value>com.prosperity.RestResourceApplication</param-value>
 		</init-param> -->
 		<load-on-startup>1</load-on-startup>
 	</servlet>
@@ -44,7 +44,7 @@
 	<!-- bypass all other filters for static content -->
 	<filter>
 		<filter-name>static-filter</filter-name>
-		<filter-class>com.porterhead.filter.StaticContentFilter</filter-class>
+		<filter-class>com.prosperity.filter.StaticContentFilter</filter-class>
 	</filter>
 
 	<servlet-mapping>

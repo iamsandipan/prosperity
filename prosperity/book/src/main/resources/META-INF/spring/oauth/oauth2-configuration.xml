@@ -44,9 +44,9 @@
         <property name="clientDetailsService" ref="client-details-service"/>
     </bean>
 
-    <bean id="corsFilter" class="com.porterhead.filter.SpringCrossOriginResourceSharingFilter"/>
+    <bean id="corsFilter" class="com.prosperity.filter.SpringCrossOriginResourceSharingFilter"/>
 
-    <bean id="oauthRestEntryPoint" class="com.porterhead.security.OAuthRestEntryPoint"/>
+    <bean id="oauthRestEntryPoint" class="com.prosperity.security.OAuthRestEntryPoint"/>
 
     <http pattern="/oauth/token" create-session="stateless" authentication-manager-ref="clientAuthenticationManager"
           xmlns="http://www.springframework.org/schema/security">

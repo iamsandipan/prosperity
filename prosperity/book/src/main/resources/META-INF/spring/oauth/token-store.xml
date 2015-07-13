@@ -7,7 +7,7 @@
     </beans>
 
     <beans profile="default, local, stage, test, production">
-        <bean id="tokenStore" class="com.porterhead.oauth2.mongodb.OAuth2RepositoryTokenStore">
+        <bean id="tokenStore" class="com.prosperity.oauth2.mongodb.OAuth2RepositoryTokenStore">
             <constructor-arg ref="OAuth2AccessTokenRepository"/>
             <constructor-arg ref="OAuth2RefreshTokenRepository"/>
         </bean>

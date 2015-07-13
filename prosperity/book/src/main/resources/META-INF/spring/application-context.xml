@@ -14,7 +14,7 @@
 	<mvc:default-servlet-handler />
 	<mvc:annotation-driven />
 
-	<context:component-scan base-package="com.porterhead" />
+	<context:component-scan base-package="com.prosperity" />
 	<context:component-scan base-package="com.prosperity" />
 
 	<import resource="classpath:META-INF/spring/security/security-configuration.xml" />

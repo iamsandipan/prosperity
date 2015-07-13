@@ -10,7 +10,7 @@
        http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <context:component-scan base-package="com.porterhead.oauth2.configuration"/>
+    <context:component-scan base-package="com.prosperity.oauth2.configuration"/>
 
 
     <bean id="accessDecisionManager" class="org.springframework.security.access.vote.UnanimousBased"
@@ -32,7 +32,7 @@
         </property>
     </bean>
 
-    <bean id="roleVoter" class="com.porterhead.security.HierarchicalJsr250Voter">
+    <bean id="roleVoter" class="com.prosperity.security.HierarchicalJsr250Voter">
         <constructor-arg ref="roleHierarchy" />
     </bean>
 
