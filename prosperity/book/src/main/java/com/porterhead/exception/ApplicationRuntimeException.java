@@ -2,7 +2,7 @@ package com.porterhead.exception;
 
 /**
  * @version 1.0
- * @author: Iain Porter
+ * @author: Sandipan
  * @since 26/04/2013
  */
 public class ApplicationRuntimeException extends BaseWebApplicationException {

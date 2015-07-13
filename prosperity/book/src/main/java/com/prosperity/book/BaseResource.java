@@ -11,7 +11,7 @@ import javax.ws.rs.core.SecurityContext;
 
 /**
  * @version 1.0
- * @author: Iain Porter
+ * @author: Sandipan
  * @since 07/05/2013
  */
 public class BaseResource {

@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  * @version 1.0
- * @author: Iain Porter
+ * @author: Sandipan
  * @since 22/05/2013
  */
 public class OAuth2RepositoryTokenStore implements TokenStore {

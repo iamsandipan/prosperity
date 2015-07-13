@@ -11,7 +11,7 @@ import javax.ws.rs.ext.Provider;
 
 /**
  * @version 1.0
- * @author: Iain Porter
+ * @author: Sandipan
  * @since 26/04/2013
  */
 @Provider

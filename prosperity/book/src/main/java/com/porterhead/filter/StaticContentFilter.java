@@ -5,7 +5,7 @@ import java.io.IOException;
 
 /**
  * @version 1.0
- * @author: Iain Porter
+ * @author: Sandipan
  * @since 22/05/2013
  */
 public class StaticContentFilter implements Filter {

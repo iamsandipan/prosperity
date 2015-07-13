@@ -6,7 +6,7 @@ import com.data.mongo.model.ApiUser;
 
 /**
  * @version 1.0
- * @author: Iain Porter
+ * @author: Sandipan
  * @since 29/04/2013
  */
 @XmlRootElement

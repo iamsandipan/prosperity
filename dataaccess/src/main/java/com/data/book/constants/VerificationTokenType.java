@@ -1,7 +1,7 @@
 package com.data.book.constants;
 
 /**
- * @author: Iain Porter
+ * @author: Sandipan
  */
 public enum VerificationTokenType {
 

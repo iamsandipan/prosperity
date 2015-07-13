@@ -9,7 +9,7 @@ import java.util.UUID;
 
 /**
  * @version 1.0
- * @author: Iain Porter
+ * @author: Sandipan
  * @since 30/04/2013
  */
 public abstract class BaseEntity implements Serializable {

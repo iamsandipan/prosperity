@@ -8,12 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
 
-import com.data.book.constants.Role;
 import com.data.mongo.exception.NopSqlDbException;
 import com.data.mongo.model.ApiUser;
 import com.data.mongo.model.User;
@@ -28,11 +26,16 @@ public class UserDAOService implements UserDetailsService {
    
     @Autowired
     private UserRepository userRepository;
-    
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return locateUser(username);
+    	notNull(username, "Mandatory argument 'username' missing.");
+        User user = userRepository.findByEmailAddress(username.toLowerCase());
+        if (user == null) {
+            LOG.debug("Credentials [{}] failed to locate a user.", username.toLowerCase());
+            throw new UsernameNotFoundException("failed to locate a user");
+        }
+        return user;
     }
 
     public  User findByEmailAddress(String userName){
@@ -71,6 +74,7 @@ public class UserDAOService implements UserDetailsService {
         return new ApiUser(user);
     }
 
+    
     public ApiUser getUser(String userId) throws NopSqlDbException {
         Assert.notNull(userId);
         User user = userRepository.findById(userId);
@@ -80,22 +84,8 @@ public class UserDAOService implements UserDetailsService {
         return new ApiUser(user);
     }
 
-    /**
-     * Locate the user and throw an exception if not found.
-     *
-     * @param username
-     * @return a User object is guaranteed.
-     * @throws AuthenticationException if user not located.
-     */
-    public User locateUser(final String username) {
-        notNull(username, "Mandatory argument 'username' missing.");
-        User user = userRepository.findByEmailAddress(username.toLowerCase());
-        if (user == null) {
-            LOG.debug("Credentials [{}] failed to locate a user.", username.toLowerCase());
-            throw new UsernameNotFoundException("failed to locate a user");
-        }
-        return user;
-    }
+   
+    
 
     public User insertNewUser(final User createUserRequest) {
         return userRepository.save(createUserRequest);

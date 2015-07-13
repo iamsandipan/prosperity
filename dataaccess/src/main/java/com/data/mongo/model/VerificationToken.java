@@ -15,7 +15,7 @@ import java.util.UUID;
  * The user sends the token back to the server by clicking the link and the action is processed
  *
  * @version 1.0
- * @author: Iain Porter
+ * @author: Sandipan
  * @since 14/05/2013
  */
 @Document

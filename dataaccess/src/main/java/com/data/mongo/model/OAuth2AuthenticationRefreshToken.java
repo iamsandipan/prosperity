@@ -7,7 +7,7 @@ import org.springframework.security.oauth2.provider.OAuth2Authentication;
 
 /**
  * @version 1.0
- * @author: Iain Porter
+ * @author: Sandipan
  * @since 23/05/2013
  */
 public class OAuth2AuthenticationRefreshToken extends BaseEntity {

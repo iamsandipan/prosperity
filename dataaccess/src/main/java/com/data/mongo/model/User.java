@@ -13,7 +13,7 @@ import java.util.*;
 
 /**
  * @version 1.0
- * @author: Iain Porter
+ * @author: Sandipan
  * @since 24/04/2013
  */
 @Document(collection = "app_user")

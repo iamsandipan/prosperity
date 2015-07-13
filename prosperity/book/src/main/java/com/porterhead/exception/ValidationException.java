@@ -16,7 +16,7 @@ import java.util.Set;
 
 /**
  * @version 1.0
- * @author: Iain Porter
+ * @author: Sandipan
  * @since 25/04/2013
  */
 public class ValidationException extends WebApplicationException {

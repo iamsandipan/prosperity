@@ -14,7 +14,7 @@ import javax.ws.rs.core.SecurityContext;
 
 /**
  * @version 1.0
- * @author: Iain Porter
+ * @author: Sandipan
  * @since 31/05/2013
  */
 @Path("/v1.0/me")

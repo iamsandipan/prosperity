@@ -4,7 +4,7 @@ package com.porterhead.exception;
 
 /**
  * @version 1.0
- * @author: Iain Porter
+ * @author: Sandipan
  * @since 25/04/2013
  */
 public class AuthorizationException extends BaseWebApplicationException {

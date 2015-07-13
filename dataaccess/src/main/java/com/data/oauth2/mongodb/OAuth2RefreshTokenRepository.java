@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  * @version 1.0
- * @author: Iain Porter
+ * @author: Sandipan
  * @since 23/05/2013
  */
 @Repository

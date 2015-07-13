@@ -7,7 +7,7 @@ import javax.ws.rs.core.Response;
 
 /**
  * @version 1.0
- * @author: Iain Porter
+ * @author: Sandipan
  * @since 24/04/2013
  */
 public abstract class BaseWebApplicationException extends WebApplicationException {
