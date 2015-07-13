@@ -2,8 +2,8 @@ package com.prosperity.book;
 
 import com.data.dao.book.VerificationTokenDAOService;
 import com.data.mongo.exception.NopSqlDbException;
-import com.porterhead.api.LostPasswordRequest;
-import com.porterhead.api.PasswordRequest;
+import com.prosperity.api.LostPasswordRequest;
+import com.prosperity.api.PasswordRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

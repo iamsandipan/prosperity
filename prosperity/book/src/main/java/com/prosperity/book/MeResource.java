@@ -2,7 +2,7 @@ package com.prosperity.book;
 
 import com.data.mongo.model.ApiUser;
 import com.data.mongo.model.User;
-import com.porterhead.exception.UserNotFoundException;
+import com.prosperity.exception.UserNotFoundException;
 
 import org.springframework.stereotype.Component;
 

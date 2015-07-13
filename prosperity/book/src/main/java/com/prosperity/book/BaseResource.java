@@ -2,7 +2,7 @@ package com.prosperity.book;
 
 import com.data.mongo.model.User;
 import com.data.oauth2.mongodb.UserRepository;
-import com.porterhead.exception.AuthorizationException;
+import com.prosperity.exception.AuthorizationException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;

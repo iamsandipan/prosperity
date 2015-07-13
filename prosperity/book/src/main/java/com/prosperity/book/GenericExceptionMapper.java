@@ -1,6 +1,7 @@
 package com.prosperity.book;
 
-import com.porterhead.exception.ApplicationRuntimeException;
+import com.prosperity.exception.ApplicationRuntimeException;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -39,7 +39,7 @@ import com.data.dao.book.VerificationTokenDAOService;
 import com.data.mongo.exception.NopSqlDbException;
 import com.data.mongo.model.ApiUser;
 import com.data.mongo.model.User;
-import com.porterhead.api.UpdateUserRequest;
+import com.prosperity.api.UpdateUserRequest;
 
 @Path("/v1.0/users")
 @Component
