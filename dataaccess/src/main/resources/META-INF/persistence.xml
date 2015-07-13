@@ -8,7 +8,6 @@
 		<class>com.data.book.Event</class>
 		<class>com.data.book.Card</class>
 		<class>com.data.book.Lesson</class>
-		<class>com.data.security.OauthCred</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/prosperity" />

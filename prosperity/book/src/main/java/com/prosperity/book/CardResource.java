@@ -20,7 +20,6 @@ import com.data.book.Card;
 import com.data.dao.book.CardDAOService;
 import com.google.gson.Gson;
 import com.prosperity.model.CardWebModel;
-import com.prosperity.filters.SecurityFilter;
 
 /** Example resource class hosted at the URI path "/myresource"
  */
