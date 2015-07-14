@@ -27,7 +27,7 @@ public class BookExportConfig {
 	private OAuth2RefreshTokenRepository oAuth2RefreshTokenRepository;
 	
 	@Bean
-	public UserDAOService getUserDAOService(){
+	public UserDAOService userDAOService(){
 		return new UserDAOService();
 	}
 

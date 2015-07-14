@@ -16,7 +16,7 @@
 
 	<context:component-scan base-package="com.prosperity" />
 	<context:component-scan base-package="com.prosperity" />
-
+	
 	<import resource="classpath:META-INF/spring/security/security-configuration.xml" />
 	<import resource="classpath:META-INF/spring/security/authentication-managers.xml" />
 	<import resource="classpath:META-INF/spring/security/endpoint-configuration.xml" />
